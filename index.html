@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Lam Tei Elderly & Nursing Home dashboard prototype" />
+  <title>Lam Tei Elderly & Nursing Home Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="brand">
+        <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+        <div class="brand-mark" aria-hidden="true">
+          <span class="person p1"></span><span class="person p2"></span>
+          <span class="mountain m1"></span><span class="mountain m2"></span><span class="sun"></span>
+        </div>
+        <div>
+          <div class="brand-name">Lam Tei Elderly & Nursing Home</div>
+          <div class="view-title" id="viewTitle">院舍電子白板 Dashboard</div>
+        </div>
+      </div>
+      <div class="top-actions">
+        <span class="date">22/7/2026</span>
+        <span class="time">09:30</span>
+        <div class="user">
+          <span class="avatar">林</span>
+          <span><strong>林二美</strong><small>TM (CIE)</small></span>
+        </div>
+      </div>
+    </header>
+
+    <div class="main-layout">
+      <aside class="sidebar">
+        <nav class="primary-nav">
+          <button class="nav-item active" data-view="operation"><span>⌂</span>Operation View</button>
+          <button class="nav-item" data-view="director"><span>▦</span>Professional View</button>
+          <button class="nav-item" data-view="ceo"><span>◫</span>KPI View</button>
+        </nav>
+
+        <div class="divider"></div>
+
+        <nav class="secondary-nav">
+          <button class="nav-item muted"><span>!</span>重要訊息</button>
+          <button class="nav-item muted"><span>▣</span>更換尿喉</button>
+          <button class="nav-item muted"><span>◔</span>每週藥量院友</button>
+          <button class="nav-item muted"><span>◉</span>每兩週藥量院友</button>
+          <button class="nav-item muted"><span>⌄</span>VMO</button>
+          <button class="nav-item muted"><span>□</span>跟進到期</button>
+          <button class="nav-item muted"><span>▱</span>文件夾</button>
+        </nav>
+
+        <button class="nav-item settings"><span>⚙</span>設定</button>
+      </aside>
+
+      <main class="content">
+        <section class="view active" id="operationView">
+          <div class="operation-grid">
+            <article class="panel notice-panel">
+              <div class="panel-header"><h2>重要訊息</h2><button>新增 ＋</button></div>
+              <div class="notice-list">
+                <div><span class="tag">置頂</span><b>3/F 白板更新　24/6/2026</b><span>林二美</span><small>2小時前</small></div>
+                <div><span class="tag">置頂</span><b>感染控制指引更新</b><span>醫務部</span><small>1天前</small></div>
+                <div><span class="tag">置頂</span><b>員工訓練：防跌工作坊</b><span>HR</span><small>2天前</small></div>
+              </div>
+              <a href="#">更多…</a>
+            </article>
+
+            <article class="panel focus-panel">
+              <div class="panel-header"><h2>今日重點</h2></div>
+              <div class="focus-metric">SpO2</div>
+              <div class="focus-row"><span class="focus-frequency">QD</span><div class="note">注意事項：<br>請每 02：收集<br>(POD)</div></div>
+              <div class="resident-name">馬小娟</div>
+            </article>
+
+            <article class="panel catheter-panel">
+              <div class="panel-header"><h2>更換尿喉</h2><button>新增 ＋</button></div>
+              <div class="simple-table">
+                <div><span>307-1</span><span>陳大文</span><span>FR.14</span><span>2/8/2026</span></div>
+                <div><span>308-2</span><span>馬小娟</span><span>FR.14</span><span>9/8/2026</span></div>
+                <div><span>308-5</span><span>張家發</span><span>FR.14</span><span>8/8/2026</span></div>
+                <div><span>304-2</span><span>李符珍</span><span>FR.16</span><span>10/8/2026</span></div>
+              </div>
+              <a href="#">更多…</a>
+            </article>
+
+            <article class="panel handover-panel">
+              <div class="panel-header"><h2>日常事項 / 交班訊息</h2><button>新增 ＋</button></div>
+              <p>15:30　物資到貨：PPE、清潔用品</p>
+              <p>17/7　出車時間：馬像專　TM/LC450－1部 ×</p>
+              <div class="tabs">
+                <button class="active">全部</button><button>待跟進</button><button>已完成</button><button>日期由</button><span>22/7/2026</span>
+              </div>
+              <div class="handover-content">
+                <strong>1600　關節痛　PDH　POD　文兒</strong>
+                <strong>陳大文</strong>
+              </div>
+              <div class="attachment">附件（2）　⌕</div>
+            </article>
+
+            <article class="panel weekly-panel">
+              <div class="panel-header"><h2>每週藥量院友</h2></div>
+              <ol class="two-column-list">
+                <li>李健美</li><li>周福強</li><li>梁婆好</li><li>楊詩玲</li><li>陳森</li>
+              </ol>
+              <a href="#">更多…</a>
+            </article>
+
+            <article class="panel biweekly-panel">
+              <div class="panel-header"><h2>每兩週藥量院友</h2></div>
+              <ol class="two-column-list">
+                <li>蔡家華</li><li>梁家蓮</li><li>鄭銀蓮</li><li>葉美好</li>
+              </ol>
+              <a href="#">更多…</a>
+            </article>
+
+            <article class="panel vmo-panel">
+              <div class="panel-header"><h2>VMO</h2></div>
+              <div class="vmo-card">
+                <b>林二美</b>
+                <span>TM-CIE　由：18/6/24</span>
+                <span>第 4 個月已到期</span>
+                <strong>→ 自動移至「跟進到期」</strong>
+              </div>
+            </article>
+
+            <article class="panel follow-panel">
+              <div class="panel-header"><h2>跟進到期</h2></div>
+              <div class="simple-table two-col">
+                <div><span>1. 員工合約</span><span>5/8/2026</span></div>
+                <div><span>2. 培訓證書</span><span>10/8/2026</span></div>
+                <div><span>3. 藥物庫存</span><span>15/8/2026</span></div>
+              </div>
+              <a href="#">更多…</a>
+            </article>
+
+            <article class="panel folders-panel">
+              <div class="panel-header"><h2>文件夾 / 參考文件</h2></div>
+              <div class="folders">
+                <button>▱<span>通告</span></button>
+                <button>▱<span>政策及指引</span></button>
+                <button>▱<span>表格</span></button>
+                <button>▱<span>培訓資料</span></button>
+                <button>▱<span>報告</span></button>
+                <button class="more">更多… →</button>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="view" id="directorView">
+          <div class="kpi-row director-kpis">
+            <div class="kpi-card"><span>入住率</span><strong>78%</strong><small>▲ 6% vs 上月</small></div>
+            <div class="kpi-card"><span>總人數</span><strong>75 / 96</strong><small>▲ 5 vs 上月</small></div>
+            <div class="kpi-card"><span>長期住客</span><strong>68</strong><small>▲ 4 vs 上月</small></div>
+            <div class="kpi-card"><span>等候入住</span><strong>3</strong><small>▼ 2 vs 上月</small></div>
+            <div class="kpi-card"><span>本月營運成本</span><strong>$489K</strong><small>▼ 12K vs 上月</small></div>
+            <div class="kpi-card"><span>本月服務收益</span><strong>$612K</strong><small>▲ 35K vs 上月</small></div>
+            <div class="kpi-card"><span>人手配置</span><strong>1 : 1.38</strong><small>標準 1 : 1.3</small></div>
+          </div>
+
+          <div class="director-grid">
+            <article class="panel">
+              <div class="panel-header"><h2>入住狀況（長期 vs 短期）</h2></div>
+              <div class="donut" style="--value:91"><span>75</span></div>
+              <div class="legend"><span><i class="green"></i>長期住客 68 (91%)</span><span><i class="gold"></i>短期住客 7 (9%)</span></div>
+            </article>
+
+            <article class="panel">
+              <div class="panel-header"><h2>等候入住原因</h2></div>
+              <div class="pie"></div>
+              <div class="legend"><span><i class="green"></i>護理需要 12 (38%)</span><span><i class="gold"></i>床位不足 8 (25%)</span><span><i class="light"></i>其他原因 11 (37%)</span></div>
+            </article>
+
+            <article class="panel wide-chart">
+              <div class="panel-header"><h2>服務使用概況（本月）</h2></div>
+              <div class="bars horizontal">
+                <div><span>個人護理</span><b style="--w:85%">58 (85%)</b></div>
+                <div><span>健康監察</span><b style="--w:62%">42 (62%)</b></div>
+                <div><span>康樂活動</span><b style="--w:53%">36 (53%)</b></div>
+                <div><span>膳食服務</span><b style="--w:90%">68 (90%)</b></div>
+                <div><span>藥物管理</span><b style="--w:74%">50 (74%)</b></div>
+              </div>
+            </article>
+
+            <article class="panel">
+              <div class="panel-header"><h2>人手使用率</h2></div>
+              <svg class="line-chart" viewBox="0 0 400 180" aria-label="Staff utilization trend">
+                <polyline points="15,130 60,95 105,65 150,105 195,85 240,52 285,82 330,56 385,88"></polyline>
+                <line x1="10" y1="55" x2="390" y2="55" class="target"></line>
+              </svg>
+              <div class="chart-axis"><span>16/7</span><span>18/7</span><span>20/7</span><span>22/7</span></div>
+            </article>
+
+            <article class="panel trend-table">
+              <div class="panel-header"><h2>營運指標趨勢（最近 7 日）</h2></div>
+              <table>
+                <thead><tr><th>指標</th><th>15/7</th><th>16/7</th><th>17/7</th><th>18/7</th><th>19/7</th><th>20/7</th><th>21/7</th><th>變化</th></tr></thead>
+                <tbody>
+                  <tr><td>入住人數</td><td>58</td><td>60</td><td>59</td><td>61</td><td>63</td><td>68</td><td>75</td><td>▲17</td></tr>
+                  <tr><td>服務使用項目</td><td>210</td><td>215</td><td>198</td><td>220</td><td>245</td><td>265</td><td>278</td><td>▲68</td></tr>
+                  <tr><td>護理事件</td><td>6</td><td>7</td><td>5</td><td>6</td><td>7</td><td>8</td><td>7</td><td>▲1</td></tr>
+                  <tr><td>藥物差錯</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>▼0</td></tr>
+                  <tr><td>投訴</td><td>1</td><td>0</td><td>1</td><td>2</td><td>0</td><td>1</td><td>1</td><td>▲0</td></tr>
+                </tbody>
+              </table>
+            </article>
+
+            <article class="panel quality-panel">
+              <div class="panel-header"><h2>護理質素指標</h2></div>
+              <div class="bars horizontal compact">
+                <div><span>按時護理達標率</span><b style="--w:92%">92%</b></div>
+                <div><span>健康評估完成率</span><b style="--w:95%">95%</b></div>
+                <div><span>藥物管理準確率</span><b style="--w:98%">98%</b></div>
+                <div><span>跌倒事件</span><b style="--w:32%">1.2</b></div>
+                <div><span>壓瘡發生率</span><b style="--w:3%">0%</b></div>
+              </div>
+            </article>
+
+            <article class="panel highlights">
+              <div class="panel-header"><h2>本月重點事項</h2></div>
+              <ul>
+                <li>新增 5 位長期住客</li>
+                <li>完成護理人員培訓工作坊（22/7）</li>
+                <li>優化膳食服務流程</li>
+                <li>下月康樂活動計劃已擬定</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section class="view ceo-view" id="ceoView">
+          <div class="ceo-headline">
+            <div><span>今日重點個案</span><strong>12</strong><small>較昨日 ▲2</small></div>
+            <div><span>更換尿喉</span><strong>5</strong><small>未到期 2　已到期 3</small></div>
+            <div><span>每日藥量院友</span><strong>68</strong><small>覆蓋率 91%</small></div>
+            <div><span>每日磅重院友</span><strong>36</strong><small>覆蓋率 64%</small></div>
+            <div><span>跟進到期事項</span><strong>3</strong><small>已逾期 2</small></div>
+            <div><span>VMO 跟進中</span><strong>4</strong><small>本月累計 7</small></div>
+          </div>
+
+          <div class="ceo-grid">
+            <article class="panel">
+              <div class="panel-header"><h2>更換尿喉到期統計</h2></div>
+              <div class="pie ceo-pie"></div>
+              <div class="legend"><span><i class="green"></i>已完成 60% (3)</span><span><i class="gold"></i>未到期 20% (2)</span><span><i class="light"></i>已逾期 20% (3)</span></div>
+            </article>
+
+            <article class="panel line-panel">
+              <div class="panel-header"><h2>重點關注（SpO2）個案數趨勢</h2></div>
+              <svg class="line-chart large" viewBox="0 0 500 220">
+                <polyline points="20,140 120,165 220,105 320,125 480,65"></polyline>
+                <circle cx="20" cy="140" r="6"></circle><circle cx="120" cy="165" r="6"></circle>
+                <circle cx="220" cy="105" r="6"></circle><circle cx="320" cy="125" r="6"></circle><circle cx="480" cy="65" r="6"></circle>
+              </svg>
+              <div class="chart-axis"><span>18/7</span><span>19/7</span><span>20/7</span><span>21/7</span><span>22/7</span></div>
+            </article>
+
+            <article class="panel">
+              <div class="panel-header"><h2>日常事項 / 交班訊息 完成率</h2></div>
+              <div class="donut" style="--value:78"><span>78%</span></div>
+              <div class="legend"><span><i class="green"></i>已完成 7</span><span><i class="light"></i>待跟進 2</span></div>
+            </article>
+
+            <article class="panel">
+              <div class="panel-header"><h2>每週藥量院友 完成情況</h2></div>
+              <div class="group-bars">
+                <div><span>15/7–21/7</span><b style="--a:85%;--b:100%"></b><small>58 / 68</small></div>
+                <div><span>22/7–28/7</span><b style="--a:91%;--b:100%"></b><small>68 / 75</small></div>
+              </div>
+            </article>
+
+            <article class="panel">
+              <div class="panel-header"><h2>每兩週磅重院友 完成情況</h2></div>
+              <div class="group-bars">
+                <div><span>15/7–21/7</span><b style="--a:57%;--b:100%"></b><small>32 / 56</small></div>
+                <div><span>22/7–28/7</span><b style="--a:64%;--b:100%"></b><small>36 / 56</small></div>
+              </div>
+            </article>
+
+            <article class="panel top-five">
+              <div class="panel-header"><h2>跟進到期事項 TOP 5</h2></div>
+              <table>
+                <thead><tr><th>事項</th><th>日期</th><th>負責人</th><th>狀態</th></tr></thead>
+                <tbody>
+                  <tr><td>員工合約</td><td>5/8</td><td>HR</td><td>●</td></tr>
+                  <tr><td>培訓證書</td><td>10/8</td><td>林二美</td><td>●</td></tr>
+                  <tr><td>藥物庫存</td><td>15/8</td><td>林二美</td><td>○</td></tr>
+                  <tr><td>設備保養</td><td>18/8</td><td>工程部</td><td>○</td></tr>
+                  <tr><td>VMO 跟進</td><td>18/8</td><td>TM-CIE</td><td>○</td></tr>
+                </tbody>
+              </table>
+            </article>
+          </div>
+        </section>
+
+        <footer class="footer">
+          <span>最後更新：<b id="updatedAt">22/7/2026 09:30</b></span>
+          <button id="refreshBtn">⟳ 重新整理</button>
+        </footer>
+      </main>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
